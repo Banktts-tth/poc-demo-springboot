@@ -63,7 +63,7 @@
                         <image>eclipse-temurin:17-jre</image>
                         <platforms>
                             <platform>
-                                <architecture>arm64</architecture>
+                                <architecture>amd64</architecture>
                                 <os>linux</os>
                             </platform>
                             <platform>
