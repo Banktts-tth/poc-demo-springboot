@@ -1,3 +1,6 @@
 spring:
   application:
     name: demo_log
+  config:
+    additional-location: file:/config/application.properties
+
