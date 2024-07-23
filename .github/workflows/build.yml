@@ -53,5 +53,5 @@ jobs:
         curl -X POST -H "Accept: application/vnd.github+json" \
         -H "Authorization: token ${{ secrets.GIT_TOKEN }}" \
         https://api.github.com/repos/Banktts-tth/demo-pipeline/actions/workflows/openshift.yml/dispatches \
-        -d '{"ref":"deploy-branch"}'
+        -d '{"ref":"main"}'
 
