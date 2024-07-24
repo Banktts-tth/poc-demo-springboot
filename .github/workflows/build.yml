@@ -45,6 +45,11 @@ jobs:
         DOCKER_ACCESS_TOKEN: ${{ secrets.DOCKER_ACCESS_TOKEN }}
       run: echo $DOCKER_ACCESS_TOKEN | docker login docker.io -u $DOCKER_USERNAME --password-stdin
 
+    - name: Set up GraalVM
+      uses: graalvm/setup-graalvm@v1
+      with:
+        version: '22.3.0' # Use the latest stable version of GraalVM
+        java-version: '17'
     - name: Build and Push Docker Image with Jib
       run: mvn compile -Pnative native:compile com.google.cloud.tools:jib-maven-plugin:3.1.4:build -Dimage=docker.io/${{ secrets.DOCKER_USERNAME }}/demo-spring
     
