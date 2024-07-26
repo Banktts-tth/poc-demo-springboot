@@ -1,6 +1,10 @@
 spring:
   application:
     name: demo_log
-  config:
-    additional-location: file:/config/application.properties
+logging:
+  level:
+    org.springframework.cloud.config.client: DEBUG
+    org.springframework.web.client.RestTemplate: DEBUG
+
+
 
